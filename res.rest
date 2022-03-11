@@ -1,0 +1,68 @@
+
+post http://localhost:7000/users
+Content-Type: application/json
+
+{
+    "fullname": "Thando",
+    "email": "thando@gmail.com",
+    "password": "Thando",
+    "phone_number": "0786696767"
+}
+###
+post http://localhost:8000/
+Content-Type: application/json
+
+{
+    "fullname": "Hannah222",
+    "email": "HannahDalwai222@gmail.com",
+    "password": "HannahDalwai1234558",
+    "phone_number": "074123456722"
+}
+###
+
+post http://localhost:8000/users
+Content-Type: application/json
+
+{
+    "fullname": "user",
+    "email": "user1@gmail.com",
+    "password": "User1234",
+    "phone_number": "074123456722"
+}
+
+
+###
+post http://localhost:7000/products
+Content-Type: application/json
+
+{
+    "title": "Bathobileyyt",
+    "category": "bathobs@gmail.comhg",
+    "description": "Bathoble12",
+    "img": "0786696533",
+    "price": 20,
+    "created_by": "Lindokuhle"
+}
+
+###
+GET http://localhost:8000/products
+###
+GET  https://pointonsalebackend.herok+uapp.com/products
+###
+DELETE http://localhost:8003/users/621e0a541e7934b55bbb1fcd
+###
+PATCH http://localhost:8000/
+Content-Type: application/json
+
+{
+    "email": "HannahDalwai222@gmail.com",
+    "password": "HannahDalwai1234558"
+}
+###
+POST https://pointonsalebackend.herokuapp.com/users
+Content-Type: application/json
+
+{
+   "email": "thando@gmail.com",
+    "password": "Thando"
+}
