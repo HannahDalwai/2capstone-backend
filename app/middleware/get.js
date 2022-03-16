@@ -1,5 +1,5 @@
 const User = require("../models/users");
-const Product = require("../models/products");
+const Post = require("../models/posts");
 
 async function getUser(req, res, next) {
   let user;
@@ -17,20 +17,20 @@ async function getUser(req, res, next) {
   next();
 }
 
-async function getProduct(req, res, next) {
-  let product;
+async function getPost(req, res, next) {
+  let post;
   try {
-    product = await Product.findById(req.params.id);
+    post = await Post.findById(req.params.id);
 
-    if (product == null) {
-      return res.status(404).json({ message: "Cannot find product" });
+    if (post == null) {
+      return res.status(404).json({ message: "Cannot find post" });
     }
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
 
-  res.product = product;
+  res.post= post;
   next();
 }
 
-module.exports = { getUser, getProduct };
+module.exports = { getUser, getPost };

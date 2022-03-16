@@ -4,7 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const userRoutes = require("./app/routes/userRoutes");
-const productRoutes = require("./app/routes/productRoutes");
+const postRoutes = require("./app/routes/postRoutes");
 
 mongoose.connect(process.env.database, { useNewUrlParser: true}, () => {
   console.log("Connected to MongoDB")
@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
   });
 
   app.use("/users", userRoutes);
-  app.use("/products", productRoutes);
+  app.use("/posts", postsRoutes);
   
   app.listen(app.get("port"), () => {
     console.log(`Server running on port ${app.get("port")}`);

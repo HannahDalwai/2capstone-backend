@@ -32,22 +32,22 @@ Content-Type: application/json
 
 
 ###
-post http://localhost:7000/products
+post http://localhost:7000/posts
 Content-Type: application/json
 
 {
-    "title": "Bathobileyyt",
-    "category": "bathobs@gmail.comhg",
-    "description": "Bathoble12",
+    "title": "How to feel your feelings",
+    "category": "lifecoach@gmail.com",
+    "description": "what therapasts actually mean.",
     "img": "0786696533",
-    "price": 20,
-    "created_by": "Lindokuhle"
+    "date": 20,
+    "created_by": "Hannah Dalwai"
 }
 
 ###
-GET http://localhost:8000/products
+GET http://localhost:8000/posts
 ###
-GET  https://pointonsalebackend.herok+uapp.com/products
+GET  https://pointonsalebackend.herok+uapp.com/posts
 ###
 DELETE http://localhost:8003/users/621e0a541e7934b55bbb1fcd
 ###

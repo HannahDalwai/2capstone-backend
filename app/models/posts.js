@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-const productSchema = new mongoose.Schema({
-  product_id: {
+const postSchema = new mongoose.Schema({
+  post_id: {
     type: String,
   },
   title: {
@@ -21,13 +21,15 @@ const productSchema = new mongoose.Schema({
     required: false,
     default: "https://picsum.photos/1920",
   },
-  price: {
-    type: Number,
+  date: {
+    type: date.now,
     required: true,
   },
   created_by: {
     type: String,
+    required: true,
+
   },
 });
 
-module.exports = mongoose.model("Product", productSchema);
+module.exports = mongoose.model("Post", postSchema);
