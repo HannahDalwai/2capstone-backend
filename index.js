@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
   });
 
   app.use("/users", userRoutes);
-  app.use("/posts", postsRoutes);
+  app.use("/posts", postRoutes);
   
   app.listen(app.get("port"), () => {
     console.log(`Server running on port ${app.get("port")}`);

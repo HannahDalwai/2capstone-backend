@@ -1,5 +1,5 @@
 
-post http://localhost:7000/users
+post http://localhost:5000/users
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
     "phone_number": "0786696767"
 }
 ###
-post http://localhost:8000/
+post http://localhost:5000/users
 Content-Type: application/json
 
 {
@@ -20,7 +20,7 @@ Content-Type: application/json
 }
 ###
 
-post http://localhost:8000/users
+post http://localhost:5000/users
 Content-Type: application/json
 
 {
@@ -32,12 +32,11 @@ Content-Type: application/json
 
 
 ###
-post http://localhost:7000/posts
+post http://localhost:5000/posts
 Content-Type: application/json
 
 {
     "title": "How to feel your feelings",
-    "category": "lifecoach@gmail.com",
     "description": "what therapasts actually mean.",
     "img": "0786696533",
     "date": 20,
@@ -45,13 +44,13 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8000/posts
+GET http://localhost:5000/users
 ###
-GET  https://pointonsalebackend.herok+uapp.com/posts
+GET  https://localhost:5000/posts
 ###
 DELETE http://localhost:8003/users/621e0a541e7934b55bbb1fcd
 ###
-PATCH http://localhost:8000/
+PATCH http://localhost:5000/
 Content-Type: application/json
 
 {
@@ -59,10 +58,10 @@ Content-Type: application/json
     "password": "HannahDalwai1234558"
 }
 ###
-POST https://pointonsalebackend.herokuapp.com/users
+PATCH https://localhost:5000/users
 Content-Type: application/json
 
 {
-   "email": "thando@gmail.com",
-    "password": "Thando"
+   "email": "HannahDalwai222@gmail.com",
+    "password": "HannahDalwai1234558"
 }

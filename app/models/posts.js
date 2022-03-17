@@ -8,10 +8,7 @@ const postSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  category: {
-    type: String,
-    required: true,
-  },
+
   description: {
     type: String,
     required: true,
@@ -22,8 +19,9 @@ const postSchema = new mongoose.Schema({
     default: "https://picsum.photos/1920",
   },
   date: {
-    type: date.now,
+    type: Date,
     required: true,
+    default:Date.now
   },
   created_by: {
     type: String,

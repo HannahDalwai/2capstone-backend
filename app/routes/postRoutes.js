@@ -26,26 +26,15 @@ app.get("/:id", [authenticateToken, getPost], (req, res, next) => {
 app.post("/", authenticateToken, async (req, res, next) => {
   const { title, category, description, img, price } = req.body;
 
-  let post;
-
-  img
-    ? (post = new Post({
+  let post = new Post({
         title,
         category,
         description,
         img,
         price,
         created_by: req.user._id,
-      }))
-    : (post = new Post({
-        title,
-        category,
-        description,
-        img,
-        date,
-        created_by: req.user._id,
-      }));
-
+      })
+ 
   try {
     const newPost = await post.save();
     res.status(201).json(newPost);
@@ -55,7 +44,7 @@ app.post("/", authenticateToken, async (req, res, next) => {
 });
 
 // UPDATE a post
-app.put("/:id", [authenticateToken, getP], async (req, res, next) => {
+app.put("/:id", [authenticateToken, getPost], async (req, res, next) => {
   if (req.user._id !== res.post.created_by)
     res.status(400).json({
       message: "You do not have the permission to update this post",

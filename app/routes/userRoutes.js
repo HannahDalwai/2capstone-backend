@@ -25,7 +25,7 @@ app.get("/:id", getUser, (req, res, next) => {
 });
 
 // LOGIN user with email + password
-app.post("/login", async (req, res, next) => {
+app.patch("/", async (req, res, next) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
   console.log(user)
