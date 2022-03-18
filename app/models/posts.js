@@ -30,7 +30,11 @@ const postSchema = new mongoose.Schema({
   created_by: {
     type: String,
     required: true,
-
+  },
+  comments: {
+    type: Array,
+    required: false,
+    default: [],
   },
 });
 
