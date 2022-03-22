@@ -38,7 +38,8 @@ Content-Type: application/json
 {
     "title": "How to feel your feelings",
     "description": "what therapasts actually mean.",
-    "img": "0786696533",
+    "category": "mental health",
+    "img": "https://picsum.photos/1920",
     "date": 20,
     "created_by": "Hannah Dalwai"
 }
