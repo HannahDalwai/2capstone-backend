@@ -3,6 +3,7 @@
 const express = require("express");
 const Post = require("../models/posts");
 const { getPost } = require("../middleware/get");
+const authenticateToken = require("../middleware/auth");
 
 const app = express.Router();
 
