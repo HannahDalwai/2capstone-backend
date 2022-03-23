@@ -18,12 +18,12 @@ app.get("/", async (req, res) => {
 });
 
 // GET one post
-app.get("/:id", [authenticateToken, getPost], (req, res, next) => {
+app.get("/:id", [ getPost], (req, res, next) => {
   res.send(res.post);
 });
 
 // CREATE a post
-app.post("/", authenticateToken, async (req, res, next) => {
+app.post("/", async (req, res, next) => {
   const { title, category, description, img, author } = req.body;
 
   let post = new Post({
@@ -43,7 +43,7 @@ app.post("/", authenticateToken, async (req, res, next) => {
 });
 
 // UPDATE a post
-app.put("/:id", [authenticateToken, getPost], async (req, res, next) => {
+app.put("/:id", [ getPost], async (req, res, next) => {
   if (req.user._id !== res.post.created_by)
     res.status(400).json({
       message: "You do not have the permission to update this post",
@@ -64,7 +64,7 @@ app.put("/:id", [authenticateToken, getPost], async (req, res, next) => {
 });
 
 // DELETE a post
-app.delete("/:id", [authenticateToken, getPost], async (req, res, next) => {
+app.delete("/:id", [ getPost], async (req, res, next) => {
   if (req.user._id !== res.post.created_by)
     res.status(400).json({
       message: "You do not have the permission to delete this post",
