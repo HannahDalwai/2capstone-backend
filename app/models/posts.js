@@ -2,9 +2,7 @@ const mongoose = require("mongoose");
 
 const postSchema = new mongoose.Schema({
   
-  post_id: {
-    type: String,
-  },
+  
 
   title: {
     type: String,

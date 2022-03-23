@@ -5,6 +5,9 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const userRoutes = require("./app/routes/userRoutes");
 const postRoutes = require("./app/routes/postRoutes");
+// date
+
+
 
 mongoose.connect(process.env.database, { useNewUrlParser: true}, () => {
   console.log("Connected to MongoDB")

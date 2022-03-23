@@ -45,6 +45,19 @@ Content-Type: application/json
 }
 
 ###
+post http://localhost:5000/posts
+Content-Type: application/json
+
+{
+    "title": "the masks we wear",
+    "description": "dos and ddonts of masks.",
+    "category": "skincare",
+    "img": "https://picsum.photos/1920",
+    "date": 1,
+    "author": "Hannah Dalwai"
+}
+
+###
 GET http://localhost:5000/users
 ###
 GET  http://localhost:5000/posts

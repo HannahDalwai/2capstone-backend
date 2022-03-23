@@ -31,7 +31,7 @@ app.post("/", async (req, res, next) => {
         category,
         description,
         img,
-        author: req.user._id
+        author,
       })
  
   try {
@@ -76,5 +76,9 @@ app.delete("/:id", [ getPost], async (req, res, next) => {
     res.status(500).json({ message: error.message });
   }
 });
+
+
+
+
 
 module.exports = app;
