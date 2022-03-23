@@ -41,13 +41,13 @@ Content-Type: application/json
     "category": "mental health",
     "img": "https://picsum.photos/1920",
     "date": 20,
-    "created_by": "Hannah Dalwai"
+    "author": "Hannah Dalwai"
 }
 
 ###
 GET http://localhost:5000/users
 ###
-GET  https://localhost:5000/posts
+GET  http://localhost:5000/posts
 ###
 DELETE http://localhost:8003/users/621e0a541e7934b55bbb1fcd
 ###
@@ -55,8 +55,8 @@ PATCH http://localhost:5000/
 Content-Type: application/json
 
 {
-    "email": "HannahDalwai222@gmail.com",
-    "password": "HannahDalwai1234558"
+    "email": "email@gmail.com",
+    "password": "email@gmail.com"
 }
 ###
 PATCH https://localhost:5000/users

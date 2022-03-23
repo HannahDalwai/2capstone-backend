@@ -32,15 +32,9 @@ const postSchema = new mongoose.Schema({
     required: true,
     default:Date.now
   },
-  created_by: {
+author: {
     type: String,
     required: true,
-  },
-
-  comments: {
-    type: Array,
-    required: false,
-    default: [],
   },
 });
 
