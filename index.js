@@ -26,6 +26,8 @@ app.get("/", (req, res) => {
       routes: {
         users: `${_rootUrl}users`,
         posts: `${_rootUrl}posts`,
+        posts: `${_rootUrl}admin`,
+        posts: `${_rootUrl}create`,
       },
     });
   });

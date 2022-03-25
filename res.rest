@@ -49,11 +49,11 @@ post http://localhost:5000/posts
 Content-Type: application/json
 
 {
-    "title": "the masks we wear",
-    "description": "dos and ddonts of masks.",
-    "category": "skincare",
-    "img": "https://picsum.photos/1920",
-    "date": 1,
+    "title": "2022 journal prompts",
+    "description": "lorem",
+    "category": "movement",
+    "img": "https://i.postimg.cc/6QPCwKY2/bookicon.png",
+    "date": 51,
     "author": "Hannah Dalwai"
 }
 
