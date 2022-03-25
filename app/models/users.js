@@ -24,10 +24,6 @@ const userSchema = new mongoose.Schema({
     required: false,
     default: Date.now,
   },
-  subscribed: {
-    type: Boolean,
-    default:false,
-  },
 
 });
 
