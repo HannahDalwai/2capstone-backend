@@ -34,6 +34,7 @@ author: {
     type: String,
     required: true,
   },
+
 });
 
 module.exports = mongoose.model("Post", postSchema);
